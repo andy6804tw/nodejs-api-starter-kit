@@ -6,7 +6,8 @@
   "scripts": {
     "start": "cross-env PORT=3000 NODE_ENV='development' babel-node src/index.js",
     "debug": "cross-env PORT=3000 NODE_ENV='development' nodemon -L src/index.js --exec babel-node",
-    "test": "cross-env NODE_ENV=6000 node index.js"
+    "build": "babel src -d dist",
+    "serve": "cross-env PORT=3000 NODE_ENV='development' node dist/index.js"
   },
   "author": "",
   "license": "ISC",
